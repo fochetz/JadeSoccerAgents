@@ -21,6 +21,22 @@ public class BallAgent extends Agent {
 		}
 		
 	}
+	static void release_possesion(Agent agent)
+	{
+		if(agent == my_owner)
+		{
+			//releas possesion of the ball
+			my_owner = null;
+		}
+	}
+	public static Agent get_ball_owner() {
+		return my_owner;
+	}
+	public static void set_agent(Agent agent)
+	{
+		my_owner = agent;
+	}
+	
 	private class MovingBehaviour extends Behaviour
 	{
 
